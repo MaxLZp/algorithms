@@ -1,0 +1,24 @@
+{
+  "name": "maxlzp-algorithms",
+  "version": "1.0.0",
+  "description": "Algorithms",
+  "main": "index.js",
+  "directories": {
+    "tests-js": "tests"
+  },
+  "scripts": {
+    "test": "mocha 'tests-js/**/*.js' --recursive --timeout 60000 --exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:MaxLZp/algorithms.git"
+  },
+  "author": "MaxLZp",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^10.2.0",
+    "chai": "^4.3.7"
+  },
+  "dependencies": {
+  }
+}
