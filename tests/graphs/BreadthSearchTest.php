@@ -20,12 +20,19 @@ class BreadthSearchTest extends TestCase
      */
     public function demo()
     {
-        $node1 = new Node('QWER');
-        $node2 = new Node('ASDF');
-        $node3 = new Node('ZXCV');
-        $node4 = new Node('POUI');
-        $node5 = new Node('LKJH');
-        $node6 = new Node('MVNVC', true);
+        /*
+             2 - 4
+        1 < \/
+             3 - 5
+               \ 6*
+        */
+
+        $node1 = new Node('1');
+        $node2 = new Node('2');
+        $node3 = new Node('3');
+        $node4 = new Node('4');
+        $node5 = new Node('5');
+        $node6 = new Node('6', true);
 
         $node1->friends[] = $node2;
         $node1->friends[] = $node3;
@@ -38,9 +45,11 @@ class BreadthSearchTest extends TestCase
 
         $rootNode = $node1;
 
-        $suitable = BreadthSearch::search($rootNode);
-        $this->assertNotNull($suitable);
-        $this->assertEquals('MVNVC', $suitable->name);
+        $result = BreadthSearch::search($rootNode);
+        $this->assertNotNull($result->suitable);
+        $this->assertEquals('6', $result->suitable->name);
+        $this->assertNotEmpty($result->pathString());
+        $this->assertEquals('1 -- 3 -- 6', $result->pathString());
     }
 
     /**
@@ -48,12 +57,18 @@ class BreadthSearchTest extends TestCase
      */
     public function demo2()
     {
-        $node1 = new Node('QWER');
-        $node2 = new Node('ASDF');
-        $node3 = new Node('ZXCV');
-        $node4 = new Node('POUI', true);
-        $node5 = new Node('LKJH');
-        $node6 = new Node('MVNVC', true);
+        /*
+             2 - 4*
+        1 < \/
+             3 - 5
+               \ 6*
+        */
+        $node1 = new Node('1');
+        $node2 = new Node('2');
+        $node3 = new Node('3');
+        $node4 = new Node('4', true);
+        $node5 = new Node('5');
+        $node6 = new Node('6', true);
 
         $node1->friends[] = $node2;
         $node1->friends[] = $node3;
@@ -66,9 +81,11 @@ class BreadthSearchTest extends TestCase
 
         $rootNode = $node1;
 
-        $suitable = BreadthSearch::search($rootNode);
-        $this->assertNotNull($suitable);
-        $this->assertEquals('POUI', $suitable->name);
+        $result = BreadthSearch::search($rootNode);
+        $this->assertNotNull($result->suitable);
+        $this->assertEquals('4', $result->suitable->name);
+        $this->assertNotEmpty($result->pathString());
+        $this->assertEquals('1 -- 2 -- 4', $result->pathString());
     }
 
 }
