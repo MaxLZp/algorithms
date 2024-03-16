@@ -9,12 +9,12 @@
     ],
     "autoload" : {
         "psr-4" : {
-            "maxlzp\\algo\\" : "src/"
+            "MaxLZp\\Algo\\" : "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "maxlzp\\algo\\tests\\": "tests/"
+            "MaxLZp\\Algo\\Tests\\": "tests/"
         }
     },
     "require": {

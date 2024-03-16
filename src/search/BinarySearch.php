@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace maxlzp\algo\Search;
+namespace MaxLZp\Algo\Search;
 
 /**
  * Binary search in ordered indexed array

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace maxlzp\algo\sorting;
+namespace MaxLZp\Algo\Sorting;
 
 class SelectionSort
 {

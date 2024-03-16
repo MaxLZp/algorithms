@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace maxlzp\algo\graphs\breadthSearch;
+namespace MaxLZp\Algo\Graphs\BreadthSearch;
 
 class Node
 {

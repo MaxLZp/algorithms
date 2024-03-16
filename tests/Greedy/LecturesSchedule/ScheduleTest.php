@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace maxlzp\algo\tests\greedy\classes;
+namespace MaxLZp\Algo\Tests\Greedy\LecturesSchedule;
 
 use DateTime;
 use PHPUnit\Framework\TestCase;
-use maxlzp\algo\greedy\LecturesSchedule\Lecture;
-use maxlzp\algo\greedy\LecturesSchedule\Schedule;
-use maxlzp\algo\greedy\LecturesSchedule\ScheduleView;
+use MaxLZp\Algo\Greedy\LecturesSchedule\Lecture;
+use MaxLZp\Algo\Greedy\LecturesSchedule\Schedule;
+use MaxLZp\Algo\Greedy\LecturesSchedule\ScheduleView;
 
 final class ScheduleTest extends TestCase
 {
@@ -16,7 +16,7 @@ final class ScheduleTest extends TestCase
      * @test
      * @dataProvider lecturesDataProvider
      */
-    public function shouldArrangeClasses($lectures, $since, $duration, $expectedCount): void
+    public function shouldArrangeClasses($lectures, $since, $expectedCount): void
     {
         $schedule = Schedule::maxAttend($lectures, $since);
 

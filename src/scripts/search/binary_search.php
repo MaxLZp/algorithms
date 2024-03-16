@@ -4,7 +4,7 @@ declare(strict_types = 1);
 
 require 'src/bootstrap.php';
 
-use maxlzp\algo\Search\BinarySearch;
+use MaxLZp\Algo\Search\BinarySearch;
 
 $options = getopt('s:', ['start::', 'end::', 'step::']);
 $search = isset($options['s']) ? (int)$options['s'] : 10;

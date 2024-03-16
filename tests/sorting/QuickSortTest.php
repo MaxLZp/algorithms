@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace maxlzp\algo\tests\sorting;
+namespace MaxLZp\Algo\Tests\Sorting;
 
-use maxlzp\algo\sorting\QuickSort;
-use maxlzp\algo\sorting\SortDirection;
+use MaxLZp\Algo\Sorting\QuickSort;
+use MaxLZp\Algo\Sorting\SortDirection;
 use PHPUnit\Framework\TestCase;
 
 class QuickSortTest extends TestCase
