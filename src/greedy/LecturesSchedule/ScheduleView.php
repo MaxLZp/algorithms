@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace maxlzp\algo\greedy\LecturesSchedule;
+namespace MaxLZp\Algo\Greedy\LecturesSchedule;
 
 class ScheduleView
 {

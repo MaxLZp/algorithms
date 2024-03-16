@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace maxlzp\algo\tests\recursion;
+namespace MaxLZp\Algo\Tests\Recursion;
 
 use PHPUnit\Framework\TestCase;
-use maxlzp\algo\recursion\Euklid;
+use MaxLZp\Algo\Recursion\Euklid;
 
 class EuklidTest extends TestCase
 {

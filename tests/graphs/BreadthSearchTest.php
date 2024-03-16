@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace maxlzp\algo\tests\graphs;
+namespace MaxLZp\Algo\Tests\Graphs;
 
-use maxlzp\algo\graphs\breadthSearch\BreadthSearch;
+use MaxLZp\Algo\Graphs\BreadthSearch\BreadthSearch;
 use PHPUnit\Framework\TestCase;
-use maxlzp\algo\graphs\breadthSearch\Node;
+use MaxLZp\Algo\Graphs\BreadthSearch\Node;
 
 class BreadthSearchTest extends TestCase
 {

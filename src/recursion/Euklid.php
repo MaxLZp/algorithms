@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace maxlzp\algo\recursion;
+namespace MaxLZp\Algo\Recursion;
 
 class Euklid
 {

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace maxlzp\algo\tests\sorting;
+namespace MaxLZp\Algo\Tests\Sorting;
 
-use maxlzp\algo\sorting\SelectionSort as SortingSelectionSort;
-use maxlzp\algo\sorting\SortDirection;
+use MaxLZp\Algo\Sorting\SelectionSort as SortingSelectionSort;
+use MaxLZp\Algo\Sorting\SortDirection;
 use PHPUnit\Framework\TestCase;
 
 class SelectionSortTest extends TestCase

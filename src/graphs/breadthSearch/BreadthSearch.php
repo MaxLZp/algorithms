@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace maxlzp\algo\graphs\breadthSearch;
+namespace MaxLZp\Algo\Graphs\BreadthSearch;
 
-use maxlzp\algo\graphs\breadthSearch\Result;
+use MaxLZp\Algo\Graphs\BreadthSearch\Result;
 
 class BreadthSearch
 {

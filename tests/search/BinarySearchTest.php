@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace maxlzp\algo\tests\search;
+namespace MaxLZp\Algo\Tests\Search;
 
-use maxlzp\algo\Search\BinarySearch;
+use MaxLZp\Algo\Search\BinarySearch;
 use PHPUnit\Framework\TestCase;
 
 class BinarySearchTest extends TestCase
