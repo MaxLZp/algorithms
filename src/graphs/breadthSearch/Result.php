@@ -12,7 +12,7 @@ final class Result
     public function pathString(): string
     {
         $result = $this->path[0]->name;
-        for ($i=1; $i < count($this->path); $i++) {
+        for ($i = 1; $i < count($this->path); $i++) {
             $result .= ' -- '.($this->path[$i]->name);
         }
         return $result;

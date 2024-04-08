@@ -23,7 +23,7 @@ class Schedule
         $schedule = new Schedule();
         $schedule->lectures = array_merge(
             $schedule->lectures,
-            self::buildMaxAttend(array_filter($lectures, function ($lecture) use($since){
+            self::buildMaxAttend(array_filter($lectures, function ($lecture) use ($since) {
                 return $lecture->start >= $since;
             }))
         );
@@ -38,7 +38,9 @@ class Schedule
      */
     private static function buildMaxAttend(array $lectures): array
     {
-        if (! count($lectures)) { return []; }
+        if (! count($lectures)) {
+            return [];
+        }
 
         // Find lectures that ends earliest
         $lectureEndEarliest = array_shift($lectures);
@@ -47,10 +49,12 @@ class Schedule
                 $lectureEndEarliest = $item;
             }
         }
-        if (! $lectureEndEarliest) { return []; }
+        if (! $lectureEndEarliest) {
+            return [];
+        }
 
         // filter out lectures starting before the lecture that ends earliest ends
-        $lectures = array_filter($lectures, function($lecture) use ($lectureEndEarliest) {
+        $lectures = array_filter($lectures, function ($lecture) use ($lectureEndEarliest) {
             return $lecture->start >= $lectureEndEarliest->ending;
         });
 

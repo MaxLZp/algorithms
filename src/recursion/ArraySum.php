@@ -13,7 +13,7 @@ class ArraySum
         return ($end < $start)
             ? 0
             : ($array[$end] + self::get($array, $start, $end - 1));
-            //or
-            // : ($array[$start] + self::get($array, $start + 1, $end));
+        //or
+        // : ($array[$start] + self::get($array, $start + 1, $end));
     }
 }

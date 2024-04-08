@@ -9,7 +9,6 @@ use MaxLZp\Algo\Recursion\Factorial;
 
 class FactorialTest extends TestCase
 {
-
     /**
      * Undocumented function
      *
