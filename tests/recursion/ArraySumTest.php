@@ -9,7 +9,6 @@ use MaxLZp\Algo\Recursion\ArraySum;
 
 class ArraySumTest extends TestCase
 {
-
     /**
      * @test
      * @dataProvider factorialDataProvider

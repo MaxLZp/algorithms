@@ -6,6 +6,6 @@ namespace MaxLZp\Algo\Sorting;
 
 class SortDirection
 {
-    const ASC = 'asc';
-    const DESC = 'desc';
+    public const ASC = 'asc';
+    public const DESC = 'desc';
 }

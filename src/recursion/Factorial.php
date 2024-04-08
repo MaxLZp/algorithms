@@ -8,6 +8,6 @@ class Factorial
 {
     public static function get($num)
     {
-        return $num === 1 ? 1 : ($num * self::get($num-1));
+        return $num === 1 ? 1 : ($num * self::get($num - 1));
     }
 }

@@ -15,7 +15,7 @@ class ScheduleView
 
     public function draw(): void
     {
-        $divider = $this->createLine(str_repeat('-', $this->dateTimeWidth), str_repeat('-', $this->descriptionWidth) );
+        $divider = $this->createLine(str_repeat('-', $this->dateTimeWidth), str_repeat('-', $this->descriptionWidth));
         $lines = [
             "",
             $divider,

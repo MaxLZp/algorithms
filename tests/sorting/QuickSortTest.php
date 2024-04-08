@@ -10,7 +10,6 @@ use PHPUnit\Framework\TestCase;
 
 class QuickSortTest extends TestCase
 {
-
     /**
      * @test
      * @dataProvider sortingProviderAsc

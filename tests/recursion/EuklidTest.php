@@ -9,7 +9,6 @@ use MaxLZp\Algo\Recursion\Euklid;
 
 class EuklidTest extends TestCase
 {
-
     /**
      * Undocumented function
      *

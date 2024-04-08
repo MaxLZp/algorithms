@@ -9,7 +9,7 @@ namespace MaxLZp\Algo\Search;
  */
 class BinarySearch
 {
-    const STEPS_LIMIT = 1000;
+    public const STEPS_LIMIT = 1000;
 
     /** @return array */
     public static function generateHaystack($start, $end, $step = 1)
@@ -22,7 +22,7 @@ class BinarySearch
     {
         $result = new SearchResult();
         $low = 0;
-        $high = count($haystack) -1 ;
+        $high = count($haystack) - 1 ;
 
         while ($low <= $high && $result->steps < self::STEPS_LIMIT) {
             $mid = (int)floor((($low + $high) / 2));

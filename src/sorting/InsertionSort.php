@@ -14,8 +14,8 @@ class InsertionSort
         for ($i = 0; $i < count($result); $i++) {
 
             for ($j = $i; $j > 0; $j--) {
-                if ($compare($result[$j], $result[$j-1])) {
-                    list($result[$j], $result[$j-1]) = [$result[$j-1], $result[$j]];
+                if ($compare($result[$j], $result[$j - 1])) {
+                    list($result[$j], $result[$j - 1]) = [$result[$j - 1], $result[$j]];
                 }
             }
 
