@@ -5,4 +5,4 @@ composer.phar
 .phpunit.result.cache
 /testResults/
 node_modules/
-
+.php-cs-fixer.cache
