@@ -31,4 +31,29 @@ class ArraySumTest extends TestCase
             [[4, 5, 6], 15],
         ];
     }
+
+    /**
+     * @test
+     * @dataProvider getArrayDataProvider
+     * @param  array  $input
+     * @param  array  $expected
+     * @return void
+     */
+    public function shouldGetArray($input, $expected)
+    {
+        $res = ArraySum::getArray($input);
+        $diff = array_diff($res, $expected);
+        $this->assertEquals(0, count($diff));
+    }
+
+    public function getArrayDataProvider()
+    {
+        return [
+            [[], []],
+            [[1], [1]],
+            [[1, 2], [1, 3]],
+            [[1, 2, 3], [1, 3, 6]],
+            [[4, 5, 6], [4, 9, 15]],
+        ];
+    }
 }
