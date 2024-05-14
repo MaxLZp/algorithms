@@ -4,8 +4,16 @@ declare(strict_types=1);
 
 namespace MaxLZp\Algo\Sorting;
 
-class SortDirection
+enum SortDirection
 {
-    public const ASC = 'asc';
-    public const DESC = 'desc';
+    case ASC;
+    case DESC;
+
+    public function getComparer(): callable
+    {
+        return match($this){
+            SortDirection::ASC => fn($l, $r) => $l > $r,
+            SortDirection::DESC => fn($l, $r) => $r > $l,
+        };
+    }
 }
