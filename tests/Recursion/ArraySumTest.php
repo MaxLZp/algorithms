@@ -12,7 +12,7 @@ class ArraySumTest extends TestCase
     /**
      * @test
      * @dataProvider factorialDataProvider
-     * @param  int  $input
+     * @param  array  $input
      * @param  int  $expected
      * @return void
      */
@@ -21,7 +21,7 @@ class ArraySumTest extends TestCase
         $this->assertEquals($expected, ArraySum::get($input));
     }
 
-    public function factorialDataProvider()
+    public function factorialDataProvider(): array
     {
         return [
             [[], 0],
@@ -46,7 +46,7 @@ class ArraySumTest extends TestCase
         $this->assertEquals(0, count($diff));
     }
 
-    public function getArrayDataProvider()
+    public function getArrayDataProvider(): array
     {
         return [
             [[], []],

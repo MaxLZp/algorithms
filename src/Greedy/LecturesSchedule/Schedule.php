@@ -49,7 +49,7 @@ class Schedule
                 $lectureEndEarliest = $item;
             }
         }
-        if (! $lectureEndEarliest) {
+        if ($lectureEndEarliest == null) {
             return [];
         }
 

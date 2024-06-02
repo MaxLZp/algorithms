@@ -6,7 +6,7 @@ namespace MaxLZp\Algo\Sorting;
 
 class BubbleSort
 {
-    public static function sort($input, SortDirection $direction = SortDirection::ASC): array
+    public static function sort(array $input, SortDirection $direction = SortDirection::ASC): array
     {
         if (count($input) <= 1) {
             return $input;

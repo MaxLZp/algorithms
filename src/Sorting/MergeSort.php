@@ -6,7 +6,7 @@ namespace MaxLZp\Algo\Sorting;
 
 final class MergeSort
 {
-    public static function sort($input, SortDirection $direction = SortDirection::ASC): array
+    public static function sort(array $input, SortDirection $direction = SortDirection::ASC): array
     {
         // base case - input is sorted
         if (count($input) == 1) {

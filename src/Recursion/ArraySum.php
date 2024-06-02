@@ -6,7 +6,7 @@ namespace MaxLZp\Algo\Recursion;
 
 class ArraySum
 {
-    public static function get($array, $start = null, $end = null)
+    public static function get(array $array, int $start = null, int $end = null): float
     {
         $start = $start ?? 0;
         $end = $end ?? count($array) - 1;

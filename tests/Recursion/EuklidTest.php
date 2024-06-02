@@ -14,7 +14,7 @@ class EuklidTest extends TestCase
      *
      * @test
      * @dataProvider factorialDataProvider
-     * @param  int  $input
+     * @param  array  $input
      * @param  int  $expected
      * @return void
      */
@@ -23,7 +23,7 @@ class EuklidTest extends TestCase
         $this->assertEquals($expected, Euklid::get($input[0], $input[1]));
     }
 
-    public function factorialDataProvider()
+    public function factorialDataProvider(): array
     {
         return [
             [[1,1],1],

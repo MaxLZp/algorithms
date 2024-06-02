@@ -8,9 +8,12 @@ use DateInterval;
 use DateTimeImmutable;
 use DateTimeInterface;
 
+/**
+ * @property-read DateTimeInterface $ending
+ */
 class Lecture
 {
-    public static $DEFAULT_DURATION = 'PT45M';
+    public static string $DEFAULT_DURATION = 'PT45M';
 
     public DateInterval $duration;
 

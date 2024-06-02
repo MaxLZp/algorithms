@@ -6,8 +6,8 @@ namespace MaxLZp\Algo\Greedy\LecturesSchedule;
 
 class ScheduleView
 {
-    private $dateTimeWidth    = 20;
-    private $descriptionWidth = 40;
+    private int $dateTimeWidth    = 20;
+    private int $descriptionWidth = 40;
 
     public function __construct(private Schedule $schedule)
     {

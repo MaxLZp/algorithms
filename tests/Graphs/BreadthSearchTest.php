@@ -18,7 +18,7 @@ class BreadthSearchTest extends TestCase
     /**
      * @test
      */
-    public function demo()
+    public function demo(): void
     {
         /*
              2 - 4
@@ -55,7 +55,7 @@ class BreadthSearchTest extends TestCase
     /**
      * @test
      */
-    public function demo2()
+    public function demo2(): void
     {
         /*
              2 - 4*
