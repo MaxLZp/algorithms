@@ -13,7 +13,7 @@ class BubbleSortRecursive
         return self::doSort($input, $sortDirection->getComparer());
     }
 
-    private static function doSort(array &$input, callable $comparer, $len = null): array
+    private static function doSort(array &$input, callable $comparer, int $len = null): array
     {
         $len = $len ?: count($input);
         if ($len <= 1) {

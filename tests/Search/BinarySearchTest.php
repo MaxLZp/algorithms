@@ -15,14 +15,14 @@ class BinarySearchTest extends TestCase
      * @param  array  $haystack
      * @param  int    $needle
      * @param  array  $expected
-     * @return boolean
+     * @return void
      */
     public function shouldFindIndex($haystack, $needle, $expected)
     {
         $this->assertEquals($expected, BinarySearch::search($needle, $haystack)->result);
     }
 
-    public function dataProviderShouldFindIndex()
+    public function dataProviderShouldFindIndex(): array
     {
         return [
             [[0, 1], 1, 1],
@@ -41,14 +41,14 @@ class BinarySearchTest extends TestCase
      * @dataProvider dataProviderShouldNotFindIndex
      * @param  array  $haystack
      * @param  int    $needle
-     * @return boolean
+     * @return void
      */
     public function shouldNotFindIndex($haystack, $needle)
     {
         $this->assertNull(BinarySearch::search($needle, $haystack)->result);
     }
 
-    public function dataProviderShouldNotFindIndex()
+    public function dataProviderShouldNotFindIndex(): array
     {
         return [
             [[], 1],

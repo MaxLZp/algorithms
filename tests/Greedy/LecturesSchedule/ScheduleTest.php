@@ -16,7 +16,7 @@ final class ScheduleTest extends TestCase
      * @test
      * @dataProvider lecturesDataProvider
      */
-    public function shouldArrangeClasses($lectures, $since, $expectedCount): void
+    public function shouldArrangeClasses(array $lectures, \DateTimeInterface $since, int $expectedCount): void
     {
         $schedule = Schedule::maxAttend($lectures, $since);
 

@@ -6,7 +6,7 @@ namespace MaxLZp\Algo\Sorting;
 
 class InsertionSort
 {
-    public static function sort($input, SortDirection $direction = SortDirection::ASC): array
+    public static function sort(array $input, SortDirection $direction = SortDirection::ASC): array
     {
         $result = array_filter($input);
         $compare = $direction->getComparer();

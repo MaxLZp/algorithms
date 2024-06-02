@@ -6,7 +6,7 @@ namespace MaxLZp\Algo\Recursion;
 
 class Euklid
 {
-    public static function get($width, $height)
+    public static function get(int $width, int $height): int
     {
         $min = min($width, $height);
         $max = max($width, $height);

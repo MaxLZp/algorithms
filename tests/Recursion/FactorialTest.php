@@ -23,7 +23,7 @@ class FactorialTest extends TestCase
         $this->assertEquals($expected, Factorial::get($input));
     }
 
-    public function factorialDataProvider()
+    public function factorialDataProvider(): array
     {
         return [
             [1,1],
