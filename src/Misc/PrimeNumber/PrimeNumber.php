@@ -8,7 +8,9 @@ final class PrimeNumber
 {
     public static function isPrime(int $number): bool
     {
-        if ($number < 2) { return false; }
+        if ($number < 2) {
+            return false;
+        }
         for ($i = 2, $max = sqrt($number); $i <= $max; $i++) {
             if ($number % $i == 0) {
                 return false;
@@ -22,8 +24,12 @@ final class PrimeNumber
         $ceive = [];
         $numbers = [];
         for ($key = max(2, $min); $key <= $max; $key++) {
-            if (isset($ceive[$key])) { continue; }
-            if (self::isPrime($key)) { $numbers[] = $key; }
+            if (isset($ceive[$key])) {
+                continue;
+            }
+            if (self::isPrime($key)) {
+                $numbers[] = $key;
+            }
             for ($i = 2 * $key; $i <= $max; $i += $key) {
                 $ceive[$i] = $i;
             }

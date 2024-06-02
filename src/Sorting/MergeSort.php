@@ -6,7 +6,6 @@ namespace MaxLZp\Algo\Sorting;
 
 final class MergeSort
 {
-
     public static function sort($input, SortDirection $direction = SortDirection::ASC): array
     {
         // base case - input is sorted
@@ -21,7 +20,7 @@ final class MergeSort
 
         // merge sorted parts
         $result = [];
-        for ($il = $ir = 0; $il < count($left) && $ir < count($right); ) {
+        for ($il = $ir = 0; $il < count($left) && $ir < count($right);) {
             if (
                 $direction == SortDirection::ASC ? $left[$il] < $right[$ir] : $left[$il] > $right[$ir]
             ) {
