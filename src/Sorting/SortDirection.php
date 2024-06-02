@@ -11,9 +11,9 @@ enum SortDirection
 
     public function getComparer(): callable
     {
-        return match($this){
-            SortDirection::ASC => fn($l, $r) => $l > $r,
-            SortDirection::DESC => fn($l, $r) => $r > $l,
+        return match($this) {
+            SortDirection::ASC => fn ($l, $r) => $l > $r,
+            SortDirection::DESC => fn ($l, $r) => $r > $l,
         };
     }
 }

@@ -16,11 +16,13 @@ class BubbleSortRecursive
     private static function doSort(array &$input, callable $comparer, $len = null): array
     {
         $len = $len ?: count($input);
-        if ($len <= 1) { return $input; }
+        if ($len <= 1) {
+            return $input;
+        }
 
         for ($i = 1; $i < $len; $i++) {
-            if ($comparer($input[$i-1], $input[$i])) {
-                list($input[$i], $input[$i-1]) = [$input[$i-1], $input[$i]];
+            if ($comparer($input[$i - 1], $input[$i])) {
+                list($input[$i], $input[$i - 1]) = [$input[$i - 1], $input[$i]];
             }
         }
 

@@ -31,9 +31,11 @@ class ArraySum
      */
     public static function getArray(array $arr, int $sum = 0): array
     {
-        if (! $arr) { return []; }
+        if (! $arr) {
+            return [];
+        }
 
-        $s = $sum+$arr[0];
+        $s = $sum + $arr[0];
         return [$s, ...self::getArray(array_slice($arr, 1), $s)];
     }
 }
