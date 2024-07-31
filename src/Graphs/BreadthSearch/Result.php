@@ -7,6 +7,7 @@ namespace MaxLZp\Algo\Graphs\BreadthSearch;
 final class Result
 {
     public ?Node $suitable = null;
+    /** @var array<Node>|null */
     public ?array $path = null;
 
     public function pathString(): string

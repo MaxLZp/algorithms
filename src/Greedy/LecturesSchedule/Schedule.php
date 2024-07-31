@@ -14,7 +14,7 @@ class Schedule
     /**
      * Attend maximum number of lectures
      *
-     * @param  array             $lectures
+     * @param  array<Lecture>    $lectures
      * @param  DateTimeInterface $since
      * @return self
      */

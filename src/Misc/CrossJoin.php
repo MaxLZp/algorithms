@@ -6,6 +6,12 @@ namespace MaxLZp\Algo\Misc;
 
 class CrossJoin
 {
+    /**
+     * Cross join arrays
+     *
+     * @param  array<array<mixed>> ...$arrays
+     * @return array<array<mixed>>
+     */
     public static function join(array ...$arrays): array
     {
         $results = [[]];

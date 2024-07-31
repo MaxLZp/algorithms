@@ -7,6 +7,7 @@ namespace MaxLZp\Algo\Graphs\BreadthSearch;
 class Node
 {
     public string $name;
+    /** @var array<Node> */
     public array $friends = [];
     public bool $suitable = false;
 

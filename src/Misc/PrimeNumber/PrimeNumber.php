@@ -19,6 +19,13 @@ final class PrimeNumber
         return true;
     }
 
+    /**
+     * Find Primes
+     *
+     * @param  integer $min
+     * @param  integer $max
+     * @return array<int>
+     */
     public static function findPrimes(int $min, int $max): array
     {
         $ceive = [];

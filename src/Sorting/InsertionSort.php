@@ -6,6 +6,13 @@ namespace MaxLZp\Algo\Sorting;
 
 class InsertionSort
 {
+    /**
+     * Sort $input
+     *
+     * @param  array<mixed>  $input
+     * @param  SortDirection $direction
+     * @return array<mixed>
+     */
     public static function sort(array $input, SortDirection $direction = SortDirection::ASC): array
     {
         $result = array_filter($input);

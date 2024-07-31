@@ -6,6 +6,13 @@ namespace MaxLZp\Algo\Sorting;
 
 final class MergeSort
 {
+    /**
+     * Sort $input
+     *
+     * @param  array<mixed>  $input
+     * @param  SortDirection $direction
+     * @return array<mixed>
+     */
     public static function sort(array $input, SortDirection $direction = SortDirection::ASC): array
     {
         // base case - input is sorted

@@ -11,11 +11,26 @@ class BinarySearch
 {
     public const STEPS_LIMIT = 1000;
 
+    /**
+     * Generate haystack
+     *
+     * @param  integer $start
+     * @param  integer $end
+     * @param  integer $step
+     * @return array<int|float>
+     */
     public static function generateHaystack(int $start, int $end, int|float $step = 1): array
     {
         return range($start, max($start, $end), $step);
     }
 
+    /**
+     * Search $needle
+     *
+     * @param  integer          $needle
+     * @param  array<int|float> $haystack
+     * @return SearchResult
+     */
     public static function search(int $needle, array $haystack): SearchResult
     {
         $result = new SearchResult();

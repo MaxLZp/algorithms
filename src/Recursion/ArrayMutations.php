@@ -6,6 +6,12 @@ namespace MaxLZp\Algo\Recursion;
 
 final class ArrayMutations
 {
+    /**
+     * Mutate array
+     *
+     * @param  array<mixed> $input
+     * @return array<mixed>
+     */
     public static function mutate(array $input): array
     {
         if (count($input) == 0) {
@@ -16,6 +22,14 @@ final class ArrayMutations
         return $result;
     }
 
+    /**
+     * Execute mutation
+     *
+     * @param  array<mixed> $input
+     * @param  integer      $start
+     * @param  array<mixed> $result
+     * @return void
+     */
     private static function doMutate(array $input, int $start, array &$result = []): void
     {
         if (count($input) <= 1) {

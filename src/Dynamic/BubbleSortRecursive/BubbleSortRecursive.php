@@ -8,11 +8,26 @@ use MaxLZp\Algo\Sorting\SortDirection;
 
 class BubbleSortRecursive
 {
+    /**
+     * Sort the $input
+     *
+     * @param  array<mixed>  $input
+     * @param  SortDirection $sortDirection
+     * @return array<mixed>
+     */
     public static function sort(array &$input, SortDirection $sortDirection = SortDirection::ASC): array
     {
         return self::doSort($input, $sortDirection->getComparer());
     }
 
+    /**
+     * Sort the $input
+     *
+     * @param  array<mixed>  $input
+     * @param  callable $comparer
+     * @param  ?int $len
+     * @return array<mixed>
+     */
     private static function doSort(array &$input, callable $comparer, int $len = null): array
     {
         $len = $len ?: count($input);
