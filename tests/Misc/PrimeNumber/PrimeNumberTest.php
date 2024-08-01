@@ -46,6 +46,19 @@ final class PrimeNumberTest extends TestCase
         $this->assertSame($expected, PrimeNumber::findPrimes($min, $max));
     }
 
+    /**
+     * @dataProvider findPrimesProvider
+     *
+     * @param  integer $min
+     * @param  integer $max
+     * @param  array   $expected
+     * @return void
+     */
+    public function test_should_find_primes_in_range_ver2(int $min, int $max, array $expected): void
+    {
+        $this->assertSame($expected, PrimeNumber::findPrimes2($min, $max));
+    }
+
     public function findPrimesProvider(): array
     {
         return [

@@ -43,4 +43,41 @@ final class PrimeNumber
         }
         return $numbers;
     }
+
+    /**
+     * Find Primes.
+     *
+     * Second colution.
+     *
+     * @param  integer $min
+     * @param  integer $max
+     * @return array<int>
+     */
+    public static function findPrimes2(int $min, int $max): array
+    {
+        // Init
+        // All numbers from 2 to $max
+        // Ceive numbers will be reset to null later
+        $numbers = [];
+        for ($key = max(2, $min); $key <= $max; $key++) {
+            $numbers[$key] = $key;
+        }
+
+        // run up to $key <= sqrt($max) as all greater number are checked earlier
+        for ($key = max(2, $min); $key <= sqrt($max); $key++) {
+            // Is ceive number was was reset null(and is not prime)
+            if ($numbers[$key] == null) {
+                continue;
+            }
+            if (self::isPrime($key)) {
+                // reset $numbers values to null for all products of $key(up to $max)
+                for ($i = 2 * $key; $i <= $max; $i += $key) {
+                    $numbers[$i] = null;
+                }
+            }
+        }
+
+        return array_values(array_filter($numbers));
+    }
+
 }
