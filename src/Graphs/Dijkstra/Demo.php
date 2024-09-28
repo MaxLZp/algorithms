@@ -2,25 +2,13 @@
 
 declare(strict_types=1);
 
-namespace maxlzp\algo\tests\graphs;
+namespace MaxLZp\Algo\Graphs\Dijkstra;
 
-use PHPUnit\Framework\TestCase;
-use maxlzp\algo\graphs\dijkstraSearch\Node;
-
-class DijkstraSearchTest extends TestCase
+final class Demo
 {
-    public function setup(): void
-    {
 
-    }
-
-    /**
-     * @test
-     */
     public function demo()
     {
-
-
         $graph = [
             'start' => [
                 'a' => 6,
@@ -45,8 +33,9 @@ class DijkstraSearchTest extends TestCase
         $parents = [
             'a' => 'start',
             'b' => 'start',
-            'finish' => '',
+            'finish' => ''
         ];
+
 
         $processed = [];
 
@@ -91,5 +80,4 @@ class DijkstraSearchTest extends TestCase
         }
         return $node;
     }
-
 }
