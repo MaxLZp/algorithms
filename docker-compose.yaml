@@ -1,0 +1,33 @@
+version: "3.7"
+services:
+
+  app:
+    build:
+      args:
+        user: user
+        uid: 1000
+      context: ./docker-compose
+      dockerfile: php.Dockerfile
+    image: doctrine_docker
+    container_name: doctrine_docker_app
+    restart: always
+    working_dir: /var/www/
+    volumes:
+      - ./:/var/www
+      - ./docker-compose/_logs:/var/log
+    networks:
+      - algorithms_network
+
+  composer:
+    container_name: doctrine_docker_composer
+    build:
+      context: docker-compose
+      dockerfile: composer.Dockerfile
+    volumes:
+      - ./:/var/www
+    networks:
+      - algorithms_network
+
+networks:
+  algorithms_network:
+    driver: bridge
