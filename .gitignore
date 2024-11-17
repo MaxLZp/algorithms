@@ -6,3 +6,4 @@ composer.phar
 /testResults/
 node_modules/
 .php-cs-fixer.cache
+/docker-compose/_logs/
