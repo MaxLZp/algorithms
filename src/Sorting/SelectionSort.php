@@ -18,11 +18,13 @@ class SelectionSort
         $comparer = $direction->getComparer();
         $result = array_filter($input);
         for ($i = 0; $i < count($result); $i++) {
+            $idx = $i;
             for ($j = $i + 1; $j < count($result); $j++) {
-                if ($comparer($result[$i], $result[$j])) {
-                    list($result[$j], $result[$i]) = [$result[$i], $result[$j]];
+                if ($comparer($result[$idx], $result[$j])) {
+                    $idx = $j;
                 }
             }
+            list($result[$idx], $result[$i]) = [$result[$i], $result[$idx]];
         }
         return $result;
     }
