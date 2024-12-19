@@ -8,7 +8,7 @@ use MaxLZp\Algo\Sorting\MergeSort as SortingMergeSort;
 use MaxLZp\Algo\Sorting\SortDirection;
 use PHPUnit\Framework\TestCase;
 
-class MergeSortTest extends TestCase
+final class MergeSortTest extends TestCase
 {
     /**
      * @test

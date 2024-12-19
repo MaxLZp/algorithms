@@ -7,7 +7,7 @@ namespace MaxLZp\Algo\Tests\Misc;
 use MaxLZp\Algo\Misc\CrossJoin;
 use PHPUnit\Framework\TestCase;
 
-class CrossJoinTest extends TestCase
+final class CrossJoinTest extends TestCase
 {
     public function testShouldJoin(): void
     {

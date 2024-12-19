@@ -7,7 +7,7 @@ namespace MaxLZp\Algo\Tests\Recursion;
 use PHPUnit\Framework\TestCase;
 use MaxLZp\Algo\Recursion\Factorial;
 
-class FactorialTest extends TestCase
+final class FactorialTest extends TestCase
 {
     /**
      * Undocumented function

@@ -8,7 +8,7 @@ use MaxLZp\Algo\Sorting\SelectionSort as SortingSelectionSort;
 use MaxLZp\Algo\Sorting\SortDirection;
 use PHPUnit\Framework\TestCase;
 
-class SelectionSortTest extends TestCase
+final class SelectionSortTest extends TestCase
 {
     /**
      * @test

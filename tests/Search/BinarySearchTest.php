@@ -7,7 +7,7 @@ namespace MaxLZp\Algo\Tests\Search;
 use MaxLZp\Algo\Search\BinarySearch;
 use PHPUnit\Framework\TestCase;
 
-class BinarySearchTest extends TestCase
+final class BinarySearchTest extends TestCase
 {
     /**
      * @test

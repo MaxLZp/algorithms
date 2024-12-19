@@ -7,7 +7,7 @@ namespace MaxLZp\Algo\Tests\Recursion;
 use PHPUnit\Framework\TestCase;
 use MaxLZp\Algo\Recursion\ArraySum;
 
-class ArraySumTest extends TestCase
+final class ArraySumTest extends TestCase
 {
     /**
      * @test

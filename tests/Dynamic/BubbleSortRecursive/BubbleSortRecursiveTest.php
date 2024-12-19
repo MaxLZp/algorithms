@@ -8,7 +8,7 @@ use PHPUnit\Framework\TestCase;
 use MaxLZp\Algo\Sorting\SortDirection;
 use MaxLZp\Algo\Dynamic\BubbleSortRecursive\BubbleSortRecursive;
 
-class BubbleSortRecursiveTest extends TestCase
+final class BubbleSortRecursiveTest extends TestCase
 {
     /**
      * @test

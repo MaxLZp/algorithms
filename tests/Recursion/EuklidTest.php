@@ -7,7 +7,7 @@ namespace MaxLZp\Algo\Tests\Recursion;
 use PHPUnit\Framework\TestCase;
 use MaxLZp\Algo\Recursion\Euklid;
 
-class EuklidTest extends TestCase
+final class EuklidTest extends TestCase
 {
     /**
      * Undocumented function

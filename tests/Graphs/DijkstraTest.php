@@ -5,11 +5,10 @@ declare(strict_types=1);
 namespace MaxLZp\Algo\Tests\Graphs;
 
 use PHPUnit\Framework\TestCase;
-use MaxLZp\Algo\Graphs\Dijkstra\Edge;
 use MaxLZp\Algo\Graphs\Dijkstra\Node;
 use MaxLZp\Algo\Graphs\Dijkstra\Dijkstra;
 
-class DijkstraTest extends TestCase
+final class DijkstraTest extends TestCase
 {
 
     public function testDijkstraSearchOne(): void
