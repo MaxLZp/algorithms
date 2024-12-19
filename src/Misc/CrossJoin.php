@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace MaxLZp\Algo\Misc;
 
-class CrossJoin
+final class CrossJoin
 {
     /**
      * Cross join arrays

@@ -6,7 +6,7 @@ namespace MaxLZp\Algo\Dynamic\BubbleSortRecursive;
 
 use MaxLZp\Algo\Sorting\SortDirection;
 
-class BubbleSortRecursive
+final class BubbleSortRecursive
 {
     /**
      * Sort the $input

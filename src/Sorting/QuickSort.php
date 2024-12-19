@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace MaxLZp\Algo\Sorting;
 
-class QuickSort
+final class QuickSort
 {
     /**
      * Sort $input

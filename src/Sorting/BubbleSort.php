@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace MaxLZp\Algo\Sorting;
 
-class BubbleSort
+final class BubbleSort
 {
     /**
      * Sort $input

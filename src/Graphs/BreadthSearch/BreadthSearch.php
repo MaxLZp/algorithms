@@ -6,7 +6,7 @@ namespace MaxLZp\Algo\Graphs\BreadthSearch;
 
 use MaxLZp\Algo\Graphs\BreadthSearch\Result;
 
-class BreadthSearch
+final class BreadthSearch
 {
     /**
      * Search for suitable node

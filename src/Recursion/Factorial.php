@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace MaxLZp\Algo\Recursion;
 
-class Factorial
+final class Factorial
 {
     public static function get(int $num): int
     {

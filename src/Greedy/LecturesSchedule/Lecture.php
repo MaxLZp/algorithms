@@ -11,7 +11,7 @@ use DateTimeInterface;
 /**
  * @property-read DateTimeInterface $ending
  */
-class Lecture
+final class Lecture
 {
     public static string $DEFAULT_DURATION = 'PT45M';
 

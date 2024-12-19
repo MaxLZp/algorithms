@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace MaxLZp\Algo\Misc\Matrix;
 
-class Matrix
+final class Matrix
 {
     /**
      * Multiply matrices

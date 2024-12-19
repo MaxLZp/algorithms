@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace MaxLZp\Algo\Greedy\LecturesSchedule;
 
-class ScheduleView
+final class ScheduleView
 {
     private int $dateTimeWidth    = 20;
     private int $descriptionWidth = 40;

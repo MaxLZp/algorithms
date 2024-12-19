@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace MaxLZp\Algo\Recursion;
 
-class ArraySum
+final class ArraySum
 {
     /**
      * Get sum of $array elelemnts
