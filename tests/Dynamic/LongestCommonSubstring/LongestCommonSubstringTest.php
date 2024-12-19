@@ -7,7 +7,7 @@ namespace MaxLZp\Algo\Tests\Dynamic\LongestCommonSubstring;
 use PHPUnit\Framework\TestCase;
 use MaxLZp\Algo\Dynamic\LongestCommonSubstring\LongestCommonSubstring;
 
-class LongestCommonSubstringTest extends TestCase
+final class LongestCommonSubstringTest extends TestCase
 {
     /**
      * @dataProvider dataProvider

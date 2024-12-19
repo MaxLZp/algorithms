@@ -7,7 +7,7 @@ namespace MaxLZp\Algo\Tests\Misc;
 use PHPUnit\Framework\TestCase;
 use MaxLZp\Algo\Misc\Matrix\Matrix;
 
-class MatrixMultilpyTest extends TestCase
+final class MatrixMultilpyTest extends TestCase
 {
     public function testMultiply(): void
     {

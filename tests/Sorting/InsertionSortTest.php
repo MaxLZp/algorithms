@@ -8,7 +8,7 @@ use MaxLZp\Algo\Sorting\InsertionSort as SortingInsertionSort;
 use MaxLZp\Algo\Sorting\SortDirection;
 use PHPUnit\Framework\TestCase;
 
-class InsertionSortTest extends TestCase
+final class InsertionSortTest extends TestCase
 {
     /**
      * @test

@@ -8,7 +8,7 @@ use MaxLZp\Algo\Sorting\QuickSort;
 use MaxLZp\Algo\Sorting\SortDirection;
 use PHPUnit\Framework\TestCase;
 
-class QuickSortTest extends TestCase
+final class QuickSortTest extends TestCase
 {
     /**
      * @test

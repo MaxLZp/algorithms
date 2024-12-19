@@ -8,7 +8,7 @@ use MaxLZp\Algo\Graphs\BreadthSearch\BreadthSearch;
 use PHPUnit\Framework\TestCase;
 use MaxLZp\Algo\Graphs\BreadthSearch\Node;
 
-class BreadthSearchTest extends TestCase
+final class BreadthSearchTest extends TestCase
 {
     public function setup(): void
     {

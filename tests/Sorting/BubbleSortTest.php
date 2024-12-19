@@ -8,7 +8,7 @@ use MaxLZp\Algo\Sorting\BubbleSort as SortingBubbleSort;
 use MaxLZp\Algo\Sorting\SortDirection;
 use PHPUnit\Framework\TestCase;
 
-class BubbleSortTest extends TestCase
+final class BubbleSortTest extends TestCase
 {
     /**
      * @test
