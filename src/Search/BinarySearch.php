@@ -7,7 +7,7 @@ namespace MaxLZp\Algo\Search;
 /**
  * Binary search in ordered indexed array
  */
-class BinarySearch
+final class BinarySearch
 {
     public const STEPS_LIMIT = 1000;
 

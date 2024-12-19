@@ -6,8 +6,7 @@ namespace MaxLZp\Algo\Graphs\Dijkstra;
 
 use MaxLZp\Algo\Graphs\Dijkstra\Node;
 
-
-class Dijkstra
+final class Dijkstra
 {
     /**
      * Find shortest path using Dijkstra algorithm.

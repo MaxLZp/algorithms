@@ -6,7 +6,7 @@ namespace MaxLZp\Algo\Greedy\LecturesSchedule;
 
 use DateTimeInterface;
 
-class Schedule
+final class Schedule
 {
     /** @var Lecture[] $lectures */
     public array $lectures = [];

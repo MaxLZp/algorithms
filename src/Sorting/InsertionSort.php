@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace MaxLZp\Algo\Sorting;
 
-class InsertionSort
+final class InsertionSort
 {
     /**
      * Sort $input

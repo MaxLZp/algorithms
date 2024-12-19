@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace MaxLZp\Algo\Recursion;
 
-class Euklid
+final class Euklid
 {
     public static function get(int $width, int $height): int
     {

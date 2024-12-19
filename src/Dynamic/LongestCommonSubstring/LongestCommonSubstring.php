@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace MaxLZp\Algo\Dynamic\LongestCommonSubstring;
 
-class LongestCommonSubstring
+final class LongestCommonSubstring
 {
     /**
      * Find longest common substring
