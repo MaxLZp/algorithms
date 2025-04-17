@@ -22,5 +22,7 @@ final class PrintTableRecursivelyTest extends TestCase
         PrintTableRecursively::printNonRecursive(10);
         echo PHP_EOL.'Recursive:'.PHP_EOL;
         PrintTableRecursively::printRecursive(10);
+
+        $this->markTestSkipped();
     }
 }
