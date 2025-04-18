@@ -6,12 +6,14 @@ namespace MaxLZp\Algo\DataStructures\Queue;
 
 final class Queue
 {
-    private int $ptr = -1;
+    private int $front = 0;
+    private int $rear = 0;
+    private $count = 0;
 
     /** @var array<int, int> */
     private array $queue;
 
-    public function __construct(public readonly int $size)
+    public function __construct(public readonly int $size = 5)
     {
         $this->queue = array_fill(0, $size, null);
     }
@@ -19,39 +21,49 @@ final class Queue
     public function put(int $value): void
     {
         if ($this->isFull()) {
-            throw new \RuntimeException('Queue is full');
+            throw new \RuntimeException('Queue is full.');
         }
-        $this->queue[++$this->ptr] = $value;
+        $this->queue[$this->rear] = $value;
+        $this->rear++;
+        if ($this->rear == $this->size) {
+            $this->rear = 0;
+        }
+        $this->count++;
     }
 
     public function get(): int
     {
         if ($this->isEmpty()) {
-            throw new \RuntimeException('Queue is empty');
+            throw new \RuntimeException('Queue is empty.');
         }
-
-        $val = $this->queue[0];
-        for ($i = 0; $i < $this->ptr; $i++) {
-            $this->queue[$i] = $this->queue[$i + 1];
+        $val = $this->queue[$this->front];
+        $this->queue[$this->front++] = null;
+        if ($this->front == $this->size) {
+            $this->front = 0;
         }
-        $this->queue[$this->ptr--] = null;
+        $this->count--;
 
         return $val;
     }
 
-    public function isFull(): bool
-    {
-        return $this->ptr + 1 >= $this->size;
-    }
-
     public function isEmpty(): bool
     {
-        return $this->ptr < 0;
+        return $this->count == 0;
     }
+
+    public function isFull(): bool
+    {
+        return $this->count == $this->size;
+    }
+
 
     public function show(): void
     {
-        var_export(implode(' <-> ', $this->queue));
-        echo PHP_EOL;
+        $array = array_merge(
+            array_slice($this->queue, $this->front, ($this->front < $this->rear ? $this->rear - $this->front : null)),
+            array_slice($this->queue, 0, ($this->rear <= $this->front ? $this->rear : 0))
+        );
+
+        echo implode('-', $array).PHP_EOL;
     }
 }

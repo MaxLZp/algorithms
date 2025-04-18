@@ -21,9 +21,19 @@ final class QueueTest extends TestCase
             $queue->show();
         }
         while(!$queue->isEmpty()) {
-            echo $queue->get().PHP_EOL;
+            echo 'Got: '.$queue->get().PHP_EOL;
             $queue->show();
         }
+
+        echo '------------------'.PHP_EOL;
+        $i = 0;
+        while(!$queue->isFull()) {
+            $queue->put(++$i);
+        }
+        $queue->get();
+        $queue->put(++$i);
+        $queue->show();
+        echo '================'.PHP_EOL;
 
         $this->markTestSkipped();
     }
