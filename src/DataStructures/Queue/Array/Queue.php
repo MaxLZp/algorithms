@@ -2,9 +2,11 @@
 
 declare(strict_types=1);
 
-namespace MaxLZp\Algo\DataStructures\Queue;
+namespace MaxLZp\Algo\DataStructures\Queue\Array;
 
-final class Queue
+use MaxLZp\Algo\DataStructures\Queue\QueueInterface;
+
+final class Queue implements QueueInterface
 {
     private int $front = 0;
     private int $rear = 0;
@@ -18,7 +20,7 @@ final class Queue
         $this->queue = array_fill(0, $size, null);
     }
 
-    public function put(int $value): void
+    public function put(mixed $value): void
     {
         if ($this->isFull()) {
             throw new \RuntimeException('Queue is full.');
@@ -31,7 +33,7 @@ final class Queue
         $this->count++;
     }
 
-    public function get(): int
+    public function get(): mixed
     {
         if ($this->isEmpty()) {
             throw new \RuntimeException('Queue is empty.');
