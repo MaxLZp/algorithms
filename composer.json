@@ -25,5 +25,10 @@
         "phpunit/phpunit": "^9.3",
         "friendsofphp/php-cs-fixer": "^3.53",
         "phpstan/phpstan": "^1.11"
+    },
+    "scripts": {
+        "phpunit": "phpunit",
+        "stan": "phpstan analyze -l 9 ./src",
+        "test": ["@phpunit", "@stan"]
     }
 }
