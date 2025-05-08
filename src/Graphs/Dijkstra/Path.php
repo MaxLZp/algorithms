@@ -6,16 +6,20 @@ namespace MaxLZp\Algo\Graphs\Dijkstra;
 
 final class Path
 {
-    private $path = [];
+    /** @var Node[] $path*/
+    private array $path = [];
 
     public static function create(): self
     {
         return new self();
     }
 
-    public static function buildFrom(Node $end): self
+    public static function buildFrom(?Node $end): self
     {
         $path = self::create();
+        if (!$end) {
+            return $path;
+        }
         $path->path[] = $end;
         while($end->parent) {
             array_unshift($path->path, $end->parent);

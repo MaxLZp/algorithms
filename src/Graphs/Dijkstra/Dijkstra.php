@@ -12,7 +12,7 @@ final class Dijkstra
      * Find shortest path using Dijkstra algorithm.
      *
      * @param Node[] $graph
-     * @return Node[]
+     * @return Path
      */
     public static function shortestPath(array $graph, Node $start, Node $end): Path
     {
@@ -23,7 +23,7 @@ final class Dijkstra
         $currentNode = $start;
         $currentNode->cost = 0;
 
-        while ($currentNode->name != $end->name || count($graph) < count($processedNodes)) {
+        while ($currentNode && ($currentNode->name != $end->name || count($graph) < count($processedNodes))) {
             foreach ($currentNode->neighbors as $neighbor) {
                 $neighbor->node->updateCost($currentNode, $currentNode->cost + $neighbor->cost);
             }
@@ -41,9 +41,9 @@ final class Dijkstra
      *
      * @param Node[] $graph
      * @param Node[] $processedNodes
-     * @return \MaxLZp\Algo\Graphs\Dijkstra\Node
+     * @return \MaxLZp\Algo\Graphs\Dijkstra\Node|null
      */
-    private static function findClosest(array $graph, array $processedNodes): Node
+    private static function findClosest(array $graph, array $processedNodes): ?Node
     {
         $newCurrentNode = null;
         foreach ($graph as $node) {

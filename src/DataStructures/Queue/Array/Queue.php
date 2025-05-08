@@ -10,9 +10,9 @@ final class Queue implements QueueInterface
 {
     private int $front = 0;
     private int $rear = 0;
-    private $count = 0;
+    private int $count = 0;
 
-    /** @var array<int, int> */
+    /** @var array<int, mixed> */
     private array $queue;
 
     public function __construct(public readonly int $size = 5)

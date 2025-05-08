@@ -11,15 +11,17 @@ class Queue implements QueueInterface
     private ?Node $front = null;
     private ?Node $rear = null;
 
-    public function put($value): void
+    public function put(mixed $value): void
     {
         $new = new Node($value);
         if ($this->isEmpty()) {
             $this->front = $new;
             $this->rear = $new;
         } else {
-            $this->rear->next = $new;
-            $this->rear = $this->rear->next;
+            if ($this->rear) {
+                $this->rear->next = $new;
+                $this->rear = $this->rear->next;
+            }
         }
     }
 
@@ -31,8 +33,8 @@ class Queue implements QueueInterface
         }
 
         $front = $this->front;
-        $frontValue = $this->front->value;
-        $this->front = $this->front->next;
+        $frontValue = $this->front?->value;
+        $this->front = $this->front?->next;
         unset($front);
 
         return $frontValue;

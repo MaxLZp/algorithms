@@ -6,13 +6,13 @@ namespace MaxLZp\Algo\Graphs\Dijkstra;
 
 class Node
 {
-    public $name;
-    /** @var Node */
-    public $neighbors = [];
-    public $cost = null;
+    public string $name;
+    /** @var Edge[] */
+    public array $neighbors = [];
+    public ?float $cost = null;
     public ?Node $parent = null;
 
-    public function __construct($name, $cost = false)
+    public function __construct(string $name, ?float $cost = null)
     {
         $this->name = $name;
         $this->cost = $cost;

@@ -7,12 +7,13 @@ namespace MaxLZp\Algo\Graphs\BreadthSearch;
 final class Result
 {
     public ?Node $suitable = null;
-    /** @var array<Node>|null */
-    public ?array $path = null;
+
+    /** @var Node[] */
+    public array $path = [];
 
     public function pathString(): string
     {
-        $result = $this->path[0]->name;
+        $result = $this->path ? $this->path[0]->name : '';
         for ($i = 1; $i < count($this->path); $i++) {
             $result .= ' -- '.($this->path[$i]->name);
         }

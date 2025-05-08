@@ -7,7 +7,7 @@ namespace MaxLZp\Algo\Graphs\Dijkstra;
 final class Demo
 {
 
-    public function demo()
+    public function demo(): void
     {
         $graph = [
             'start' => [
@@ -35,7 +35,6 @@ final class Demo
             'b' => 'start',
             'finish' => ''
         ];
-
 
         $processed = [];
 
@@ -65,7 +64,13 @@ final class Demo
         print_r($path);
     }
 
-    private function findClosest($neighbours, $processed = [])
+    /**
+     *
+     * @param array<string, mixed> $neighbours
+     * @param array<mixed> $processed
+     * @return mixed
+     */
+    private function findClosest(array $neighbours, array $processed = []): mixed
     {
         $node = null;
         foreach ($neighbours as $name => $cost) {

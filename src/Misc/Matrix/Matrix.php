@@ -9,11 +9,11 @@ final class Matrix
     /**
      * Multiply matrices
      *
-     * @param array $a
-     * @param array $b
-     * @return array
+     * @param array<array<float>> $a
+     * @param array<array<float>> $b
+     * @return array<array<float>>
      */
-    public static function multiply($a, $b): array
+    public static function multiply(array $a, array $b): array
     {
         $result = [];
         for ($i=0; $i < count($a); $i++) {
