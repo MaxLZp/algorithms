@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace MaxLZp\Algo\DataStructures\Queue;
+namespace MaxLZp\Algo\DataStructures\Queue\Queue;
 
 interface QueueInterface
 {

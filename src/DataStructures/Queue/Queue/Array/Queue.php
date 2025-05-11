@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace MaxLZp\Algo\DataStructures\Queue\Array;
+namespace MaxLZp\Algo\DataStructures\Queue\Queue\Array;
 
-use MaxLZp\Algo\DataStructures\Queue\QueueInterface;
+use MaxLZp\Algo\DataStructures\Queue\Queue\QueueInterface;
 
 final class Queue implements QueueInterface
 {

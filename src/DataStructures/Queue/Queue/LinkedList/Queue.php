@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace MaxLZp\Algo\DataStructures\Queue\LinkedList;
+namespace MaxLZp\Algo\DataStructures\Queue\Queue\LinkedList;
 
-use MaxLZp\Algo\DataStructures\Queue\QueueInterface;
+use MaxLZp\Algo\DataStructures\Queue\Queue\QueueInterface;
 
 class Queue implements QueueInterface
 {
