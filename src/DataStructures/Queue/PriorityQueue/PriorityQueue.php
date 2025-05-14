@@ -38,24 +38,24 @@ final class PriorityQueue
             return;
         }
 
-        $before = $this->head;
-        $after = null;
-        while($before && $before->getPriority() >= $node->getPriority()) {
-            $after = $before;
-            $before = $before->next;
+        $current = $this->head;
+        $previous = null;
+        while($current && $current->getPriority() > $node->getPriority()) {
+            $previous = $current;
+            $current = $current->next;
         }
 
-        $node->prev = $after;
-        $node->next = $before;
+        $node->prev = $previous;
+        $node->next = $current;
 
-        if ($after) {
-            $after->next = $node;
-        }
-        if ($before) {
-            $before->prev = $node;
-        }
-        if ($this->head == $before) {
+        if ($previous) {
+            $previous->next = $node;
+        } else {
+            // Insert as head when there is no prev node found
             $this->head = $node;
+        }
+        if ($current) {
+            $current->prev = $node;
         }
     }
 }
