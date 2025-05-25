@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace MaxLZp\Algo\Tests\DataStructures\PriorityQueue;
+namespace MaxLZp\Algo\Tests\DataStructures\Queue\PriorityQueue;
 
 use PHPUnit\Framework\TestCase;
 use MaxLZp\Algo\DataStructures\Queue\PriorityQueue\PriorityQueue;
